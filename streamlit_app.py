@@ -202,7 +202,7 @@ def main():
                 "Date Range:",
                 value=(min_date, max_date),
                 min_value=min_date,
-                max_date=max_date
+                max_value=max_date
             )
     
     # Main content

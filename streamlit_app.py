@@ -152,6 +152,24 @@ def calculate_statistics(df):
         'std': df['value'].std()
     }
 
+def sort_series_by_risk(series_list):
+    """Sort series by risk level (least risky to most risky)"""
+    # Define risk order: AAA (lowest risk) -> BAA -> High Yield (highest risk)
+    risk_order = {
+        'AAA10Y': 1,      # AAA-rated bonds (lowest risk)
+        'BAA10Y': 2,      # BAA-rated bonds (medium risk)
+        'BAMLH0A0HYM2': 3, # High-yield bonds (highest risk)
+        'DGS10': 4,       # Treasury bonds (risk-free)
+        'DGS2': 5,        # Treasury bonds (risk-free)
+        'DGS30': 6,       # Treasury bonds (risk-free)
+        'DGS3MO': 7,      # Treasury bonds (risk-free)
+        'FEDFUNDS': 8,    # Federal funds rate
+        'UNRATE': 9       # Unemployment rate
+    }
+    
+    # Sort by risk order, with unknown series at the end
+    return sorted(series_list, key=lambda x: risk_order.get(x, 999))
+
 def main():
     """Main Streamlit app"""
     
@@ -176,17 +194,29 @@ def main():
         st.sidebar.write(f"**Series Downloaded:** {summary['successful']}/{summary['total_series']}")
         
         if summary['successful_series']:
-            st.sidebar.write("**Available Series:**")
-            for series in summary['successful_series']:
-                st.sidebar.write(f"• {series}")
+            st.sidebar.write("**Available Series (by risk level):**")
+            sorted_available = sort_series_by_risk(summary['successful_series'])
+            for series in sorted_available:
+                # Add risk level indicators
+                if series == 'AAA10Y':
+                    st.sidebar.write(f"• {series} (AAA - Lowest Risk)")
+                elif series == 'BAA10Y':
+                    st.sidebar.write(f"• {series} (BAA - Medium Risk)")
+                elif series == 'BAMLH0A0HYM2':
+                    st.sidebar.write(f"• {series} (High Yield - Highest Risk)")
+                else:
+                    st.sidebar.write(f"• {series}")
     
     # Series selection
     available_series = [s for s in data.keys() if s != 'summary']
     if available_series:
+        # Sort series by risk level (least risky to most risky)
+        sorted_series = sort_series_by_risk(available_series)
+        
         selected_series = st.sidebar.multiselect(
             "Select Series to Display:",
-            available_series,
-            default=available_series[:4]  # Default to first 4 series
+            sorted_series,
+            default=sorted_series[:3]  # Default to first 3 series (AAA10Y, BAA10Y, BAMLH0A0HYM2)
         )
         
         # Date range filter

@@ -43,12 +43,34 @@ st.markdown("""
         border-radius: 0.5rem;
         margin: 1rem 0;
     }
+    .refresh-button {
+        background-color: #1f77b4;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+    }
 </style>
 """, unsafe_allow_html=True)
 
-@st.cache_data
+def get_data_freshness():
+    """Check how fresh the data is"""
+    summary_file = os.path.join("data", 'download_summary.json')
+    if os.path.exists(summary_file):
+        try:
+            with open(summary_file, 'r') as f:
+                summary = json.load(f)
+                timestamp = datetime.fromisoformat(summary['timestamp'])
+                age = datetime.now() - timestamp
+                return timestamp, age
+        except Exception:
+            return None, None
+    return None, None
+
+@st.cache_data(ttl=3600)  # Cache for 1 hour instead of indefinitely
 def load_data():
-    """Load all FRED data files"""
+    """Load all FRED data files with freshness check"""
     data = {}
     data_dir = "data"
     
@@ -175,6 +197,25 @@ def main():
     
     # Header
     st.markdown('<h1 class="main-header">📊 FRED Economic Data Dashboard</h1>', unsafe_allow_html=True)
+    
+    # Data freshness check and refresh button
+    timestamp, age = get_data_freshness()
+    
+    # Add refresh button in the top right
+    col1, col2, col3 = st.columns([1, 1, 1])
+    with col3:
+        if st.button("🔄 Refresh Data", help="Clear cache and reload data"):
+            st.cache_data.clear()
+            st.rerun()
+    
+    # Show data freshness info
+    if timestamp and age:
+        if age.total_seconds() < 3600:  # Less than 1 hour
+            st.success(f"✅ Data is fresh! Last updated: {timestamp.strftime('%Y-%m-%d %H:%M:%S')} ({age.total_seconds()//60} minutes ago)")
+        elif age.total_seconds() < 86400:  # Less than 24 hours
+            st.info(f"ℹ️ Data is recent. Last updated: {timestamp.strftime('%Y-%m-%d %H:%M:%S')} ({age.days} days, {age.seconds//3600} hours ago)")
+        else:
+            st.warning(f"⚠️ Data may be stale. Last updated: {timestamp.strftime('%Y-%m-%d %H:%M:%S')} ({age.days} days ago)")
     
     # Load data
     data = load_data()

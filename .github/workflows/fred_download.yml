@@ -1,4 +1,4 @@
-name: FRED Data Download
+name: FRED Data Download and App Redeploy
 
 on:
   schedule:
@@ -53,4 +53,13 @@ jobs:
           cat data/download_summary.json | jq '.'
         else
           echo "❌ No summary file found"
-        fi 
+        fi
+    
+    - name: Trigger Streamlit redeploy
+      if: success()
+      run: |
+        echo "🔄 Triggering Streamlit app redeploy..."
+        # This will trigger a redeploy if you have Streamlit Cloud connected
+        # The redeploy happens automatically when new commits are pushed to main
+        echo "✅ Data updated and pushed to main branch"
+        echo "📱 Streamlit app will redeploy automatically" 

@@ -1,0 +1,50 @@
+name: FRED Data Download
+
+on:
+  schedule:
+    # Run daily at 2 PM UTC (9 AM EST)
+    - cron: '0 14 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  download-fred-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Download FRED data
+      env:
+        FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        FRED_SERIES_IDS: ${{ secrets.FRED_SERIES_IDS }}
+        DAYS_BACK: ${{ secrets.DAYS_BACK }}
+      run: |
+        python fred_downloader.py
+    
+    - name: Commit and push data
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/
+        git commit -m "Update FRED data $(date)" || exit 0
+        git push
+    
+    - name: Show download summary
+      run: |
+        if [ -f "data/download_summary.json" ]; then
+          echo "📊 Download Summary:"
+          cat data/download_summary.json | jq '.'
+        else
+          echo "❌ No summary file found"
+        fi 

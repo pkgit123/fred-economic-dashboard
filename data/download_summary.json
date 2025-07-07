@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-06T14:13:47.282566",
+  "timestamp": "2025-07-07T14:15:58.579239",
   "total_series": 3,
   "successful": 3,
   "failed": 0,
@@ -14,8 +14,8 @@
       "series_id": "AAA10Y",
       "title": "Moody's Seasoned Aaa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity",
       "units": "Percent",
-      "observations": 2605,
-      "date_range": "2015-07-09 00:00:00 to 2025-07-02 00:00:00",
+      "observations": 2604,
+      "date_range": "2015-07-10 00:00:00 to 2025-07-02 00:00:00",
       "latest_value": 1.05,
       "filename": "data/AAA10Y.csv"
     },
@@ -23,8 +23,8 @@
       "series_id": "BAA10Y",
       "title": "Moody's Seasoned Baa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity",
       "units": "Percent",
-      "observations": 2605,
-      "date_range": "2015-07-09 00:00:00 to 2025-07-02 00:00:00",
+      "observations": 2604,
+      "date_range": "2015-07-10 00:00:00 to 2025-07-02 00:00:00",
       "latest_value": 1.7,
       "filename": "data/BAA10Y.csv"
     },
@@ -32,9 +32,9 @@
       "series_id": "BAMLH0A0HYM2",
       "title": "ICE BofA US High Yield Index Option-Adjusted Spread",
       "units": "Percent",
-      "observations": 2638,
-      "date_range": "2015-07-09 00:00:00 to 2025-07-02 00:00:00",
-      "latest_value": 2.88,
+      "observations": 2639,
+      "date_range": "2015-07-10 00:00:00 to 2025-07-04 00:00:00",
+      "latest_value": 2.8,
       "filename": "data/BAMLH0A0HYM2.csv"
     }
   ]

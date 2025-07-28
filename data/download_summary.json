@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-27T14:13:56.725554",
+  "timestamp": "2025-07-28T14:19:11.442565",
   "total_series": 4,
   "successful": 4,
   "failed": 0,
@@ -15,8 +15,8 @@
       "series_id": "AAA10Y",
       "title": "Moody's Seasoned Aaa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity",
       "units": "Percent",
-      "observations": 2606,
-      "date_range": "2015-07-30 00:00:00 to 2025-07-24 00:00:00",
+      "observations": 2605,
+      "date_range": "2015-07-31 00:00:00 to 2025-07-24 00:00:00",
       "latest_value": 1.04,
       "filename": "data/AAA10Y.csv"
     },
@@ -24,8 +24,8 @@
       "series_id": "BAA10Y",
       "title": "Moody's Seasoned Baa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity",
       "units": "Percent",
-      "observations": 2606,
-      "date_range": "2015-07-30 00:00:00 to 2025-07-24 00:00:00",
+      "observations": 2605,
+      "date_range": "2015-07-31 00:00:00 to 2025-07-24 00:00:00",
       "latest_value": 1.68,
       "filename": "data/BAA10Y.csv"
     },
@@ -34,8 +34,8 @@
       "title": "CBOE Volatility Index: VIX",
       "units": "Index",
       "observations": 2606,
-      "date_range": "2015-07-30 00:00:00 to 2025-07-24 00:00:00",
-      "latest_value": 15.39,
+      "date_range": "2015-07-31 00:00:00 to 2025-07-25 00:00:00",
+      "latest_value": 14.93,
       "filename": "data/VIXCLS.csv"
     },
     {
@@ -43,8 +43,8 @@
       "title": "ICE BofA US High Yield Index Option-Adjusted Spread",
       "units": "Percent",
       "observations": 2639,
-      "date_range": "2015-07-30 00:00:00 to 2025-07-24 00:00:00",
-      "latest_value": 2.82,
+      "date_range": "2015-07-31 00:00:00 to 2025-07-25 00:00:00",
+      "latest_value": 2.84,
       "filename": "data/BAMLH0A0HYM2.csv"
     }
   ]

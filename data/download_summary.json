@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-20T14:16:10.579219",
+  "timestamp": "2025-08-21T14:16:05.716080",
   "total_series": 4,
   "successful": 4,
   "failed": 0,
@@ -15,27 +15,27 @@
       "series_id": "AAA10Y",
       "title": "Moody's Seasoned Aaa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity",
       "units": "Percent",
-      "observations": 2606,
-      "date_range": "2015-08-24 00:00:00 to 2025-08-18 00:00:00",
-      "latest_value": 1.05,
+      "observations": 2607,
+      "date_range": "2015-08-24 00:00:00 to 2025-08-19 00:00:00",
+      "latest_value": 1.06,
       "filename": "data/AAA10Y.csv"
     },
     {
       "series_id": "BAA10Y",
       "title": "Moody's Seasoned Baa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity",
       "units": "Percent",
-      "observations": 2606,
-      "date_range": "2015-08-24 00:00:00 to 2025-08-18 00:00:00",
-      "latest_value": 1.7,
+      "observations": 2607,
+      "date_range": "2015-08-24 00:00:00 to 2025-08-19 00:00:00",
+      "latest_value": 1.71,
       "filename": "data/BAA10Y.csv"
     },
     {
       "series_id": "VIXCLS",
       "title": "CBOE Volatility Index: VIX",
       "units": "Index",
-      "observations": 2607,
-      "date_range": "2015-08-24 00:00:00 to 2025-08-19 00:00:00",
-      "latest_value": 15.57,
+      "observations": 2608,
+      "date_range": "2015-08-24 00:00:00 to 2025-08-20 00:00:00",
+      "latest_value": 15.69,
       "filename": "data/VIXCLS.csv"
     },
     {

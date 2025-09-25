@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-24T14:13:00.323009",
+  "timestamp": "2025-09-25T14:15:26.114538",
   "total_series": 4,
   "successful": 4,
   "failed": 0,
@@ -33,18 +33,18 @@
       "series_id": "VIXCLS",
       "title": "CBOE Volatility Index: VIX",
       "units": "Index",
-      "observations": 2607,
-      "date_range": "2015-09-28 00:00:00 to 2025-09-23 00:00:00",
-      "latest_value": 16.64,
+      "observations": 2608,
+      "date_range": "2015-09-28 00:00:00 to 2025-09-24 00:00:00",
+      "latest_value": 16.18,
       "filename": "data/VIXCLS.csv"
     },
     {
       "series_id": "BAMLH0A0HYM2",
       "title": "ICE BofA US High Yield Index Option-Adjusted Spread",
       "units": "Percent",
-      "observations": 2641,
-      "date_range": "2015-09-28 00:00:00 to 2025-09-23 00:00:00",
-      "latest_value": 2.71,
+      "observations": 2642,
+      "date_range": "2015-09-28 00:00:00 to 2025-09-24 00:00:00",
+      "latest_value": 2.7,
       "filename": "data/BAMLH0A0HYM2.csv"
     }
   ]

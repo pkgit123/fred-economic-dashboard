@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-11T14:15:36.570906",
+  "timestamp": "2025-11-12T14:16:34.434041",
   "total_series": 4,
   "successful": 4,
   "failed": 0,
@@ -33,9 +33,9 @@
       "series_id": "VIXCLS",
       "title": "CBOE Volatility Index: VIX",
       "units": "Index",
-      "observations": 2605,
-      "date_range": "2015-11-16 00:00:00 to 2025-11-07 00:00:00",
-      "latest_value": 19.08,
+      "observations": 2606,
+      "date_range": "2015-11-16 00:00:00 to 2025-11-10 00:00:00",
+      "latest_value": 17.6,
       "filename": "data/VIXCLS.csv"
     },
     {

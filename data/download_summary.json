@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-08T14:23:31.922229",
+  "timestamp": "2026-02-09T14:47:28.246020",
   "total_series": 4,
   "successful": 4,
   "failed": 0,
@@ -15,8 +15,8 @@
       "series_id": "AAA10Y",
       "title": "Moody's Seasoned Aaa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity",
       "units": "Percent",
-      "observations": 2606,
-      "date_range": "2016-02-11 00:00:00 to 2026-02-05 00:00:00",
+      "observations": 2605,
+      "date_range": "2016-02-12 00:00:00 to 2026-02-05 00:00:00",
       "latest_value": 1.16,
       "filename": "data/AAA10Y.csv"
     },
@@ -24,8 +24,8 @@
       "series_id": "BAA10Y",
       "title": "Moody's Seasoned Baa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity",
       "units": "Percent",
-      "observations": 2606,
-      "date_range": "2016-02-11 00:00:00 to 2026-02-05 00:00:00",
+      "observations": 2605,
+      "date_range": "2016-02-12 00:00:00 to 2026-02-05 00:00:00",
       "latest_value": 1.67,
       "filename": "data/BAA10Y.csv"
     },
@@ -34,8 +34,8 @@
       "title": "CBOE Volatility Index: VIX",
       "units": "Index",
       "observations": 2606,
-      "date_range": "2016-02-11 00:00:00 to 2026-02-05 00:00:00",
-      "latest_value": 21.77,
+      "date_range": "2016-02-12 00:00:00 to 2026-02-06 00:00:00",
+      "latest_value": 17.76,
       "filename": "data/VIXCLS.csv"
     },
     {
@@ -43,8 +43,8 @@
       "title": "ICE BofA US High Yield Index Option-Adjusted Spread",
       "units": "Percent",
       "observations": 2640,
-      "date_range": "2016-02-11 00:00:00 to 2026-02-05 00:00:00",
-      "latest_value": 2.97,
+      "date_range": "2016-02-12 00:00:00 to 2026-02-06 00:00:00",
+      "latest_value": 2.87,
       "filename": "data/BAMLH0A0HYM2.csv"
     }
   ]

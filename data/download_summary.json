@@ -1,25 +1,34 @@
 {
-  "timestamp": "2026-04-14T15:10:23.705366",
+  "timestamp": "2026-04-15T15:02:06.163322",
   "total_series": 4,
-  "successful": 1,
-  "failed": 3,
+  "successful": 2,
+  "failed": 2,
   "successful_series": [
-    "AAA10Y"
+    "BAA10Y",
+    "BAMLH0A0HYM2"
   ],
   "failed_series": [
-    "BAA10Y",
-    "VIXCLS",
-    "BAMLH0A0HYM2"
+    "AAA10Y",
+    "VIXCLS"
   ],
   "results": [
     {
-      "series_id": "AAA10Y",
-      "title": "Moody's Seasoned Aaa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity",
+      "series_id": "BAA10Y",
+      "title": "Moody's Seasoned Baa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity",
       "units": "Percent",
-      "observations": 2605,
-      "date_range": "2016-04-18 00:00:00 to 2026-04-10 00:00:00",
-      "latest_value": 1.11,
-      "filename": "data/AAA10Y.csv"
+      "observations": 2606,
+      "date_range": "2016-04-18 00:00:00 to 2026-04-13 00:00:00",
+      "latest_value": 1.72,
+      "filename": "data/BAA10Y.csv"
+    },
+    {
+      "series_id": "BAMLH0A0HYM2",
+      "title": "ICE BofA US High Yield Index Option-Adjusted Spread",
+      "units": "Percent",
+      "observations": 2642,
+      "date_range": "2016-04-18 00:00:00 to 2026-04-14 00:00:00",
+      "latest_value": 2.84,
+      "filename": "data/BAMLH0A0HYM2.csv"
     }
   ]
 }

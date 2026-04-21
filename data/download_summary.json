@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-20T15:13:26.817394",
+  "timestamp": "2026-04-21T15:08:12.210471",
   "total_series": 4,
   "successful": 4,
   "failed": 0,
@@ -16,7 +16,7 @@
       "title": "Moody's Seasoned Aaa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity",
       "units": "Percent",
       "observations": 2605,
-      "date_range": "2016-04-22 00:00:00 to 2026-04-16 00:00:00",
+      "date_range": "2016-04-25 00:00:00 to 2026-04-17 00:00:00",
       "latest_value": 1.1,
       "filename": "data/AAA10Y.csv"
     },
@@ -25,8 +25,8 @@
       "title": "Moody's Seasoned Baa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity",
       "units": "Percent",
       "observations": 2605,
-      "date_range": "2016-04-22 00:00:00 to 2026-04-16 00:00:00",
-      "latest_value": 1.71,
+      "date_range": "2016-04-25 00:00:00 to 2026-04-17 00:00:00",
+      "latest_value": 1.72,
       "filename": "data/BAA10Y.csv"
     },
     {
@@ -34,8 +34,8 @@
       "title": "CBOE Volatility Index: VIX",
       "units": "Index",
       "observations": 2606,
-      "date_range": "2016-04-22 00:00:00 to 2026-04-17 00:00:00",
-      "latest_value": 17.48,
+      "date_range": "2016-04-25 00:00:00 to 2026-04-20 00:00:00",
+      "latest_value": 18.87,
       "filename": "data/VIXCLS.csv"
     },
     {
@@ -43,8 +43,8 @@
       "title": "ICE BofA US High Yield Index Option-Adjusted Spread",
       "units": "Percent",
       "observations": 793,
-      "date_range": "2023-04-21 00:00:00 to 2026-04-17 00:00:00",
-      "latest_value": 2.83,
+      "date_range": "2023-04-24 00:00:00 to 2026-04-20 00:00:00",
+      "latest_value": 2.87,
       "filename": "data/BAMLH0A0HYM2.csv"
     }
   ]
